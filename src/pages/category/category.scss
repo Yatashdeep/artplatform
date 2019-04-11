@@ -1,0 +1,82 @@
+page-category {
+    .row-image{
+
+        // background: url(../assets/profile/Lighthouse.png) no-repeat;
+        background-size: cover;
+        height: 15%;
+        color: #ffff;
+        border-radius: 5px;
+        margin-bottom: 14px;
+    }
+    .col-style{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .img-size
+    {
+        height: 18px;
+        margin-top: 6px;
+    }
+    .img-size1
+    {
+        height: 18px;
+        margin-top: 6px;
+    }
+    .div-style{
+      
+        width:100%;
+        background-color:#EBEBEB; 
+        
+        border-bottom: 1px solid;
+    }
+    .col-cat{
+        display: flex;
+        justify-content: center;
+       
+        width: 100%;
+        
+        text-align: center;
+        
+        align-items: initial;
+    }
+    .p-cat{
+    
+        margin-left: 36px;
+        margin-top: 25px;
+        color: #fff;
+    }
+    .p-cat1{
+        margin-top: 21px;
+        margin-left: 26px;
+    }
+    .p-cat2{
+        margin-top: 21px;
+        margin-left: -48px;
+    }
+    .sub-cat{
+   
+        width:100%;
+        background-color:#EBEBEB;
+        opacity: .5; 
+        
+    }
+    .tick-arrow{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .col-cat1{
+    display: flex;
+    justify-content: CENTER;
+    align-items: CENTER;
+    }
+    .tree-img{
+        height: 12px;
+        position: absolute;
+        bottom: 4px;
+        margin-left: 16px;
+        display:none;
+    }
+    
+}

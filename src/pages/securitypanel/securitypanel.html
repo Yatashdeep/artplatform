@@ -1,0 +1,160 @@
+<!--
+  Generated template for the SecuritypanelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+    <ion-navbar color="primary">
+        <!-- <div id="strip-box" class="strip-div">
+         
+            <div id="log" class="login-div" (click)="navigatebar(1)">
+              <p id="logp" class="p-tagline">Login</p>
+            </div>
+            <div id="reg" class="regitser-div" (click)="navigatebar(2)">
+              <p id="regp" class="p-tagline">Register</p>
+            </div>
+          </div> -->
+          <ion-title style="text-align:center">
+          <div class="title-hope">
+             <div class="round-tab">
+              <ion-row>
+                <ion-col id="log" class="col-stylelog" (click)="navigatebar(1)">
+               <p id="logp" class="log-p">Login</p>
+                </ion-col>
+                <ion-col id="reg" class="col-stylereg" (click)="navigatebar(2)">
+                    <p id="regp" class="reg-p">Register</p> 
+                </ion-col>
+              </ion-row>
+             </div>
+          </div>
+        </ion-title>
+      </ion-navbar>
+      </ion-header>
+
+<ion-content class="no-scroll" >
+    <!-- <div class="row-class">
+        <div id="strip-box" class="strip-div">
+         
+          <div id="log" class="login-div" (click)="navigatebar(1)">
+            <p id="logp" class="p-tagline">Login</p>
+          </div>
+          <div id="reg" class="regitser-div" (click)="navigatebar(2)">
+            <p id="regp" class="p-tagline">Register</p>
+          </div>
+        </div>
+       
+      </div> -->
+
+
+    <div *ngIf="user==true">
+    <ion-row style="    margin-top: 8px;">
+<ion-col class="col-option">
+<p class="p-option">Are you a user?</p>
+<ion-radio color="primary" slot="start" value="user" checked></ion-radio>
+</ion-col>
+<ion-col class="col-option">
+<p class="p-option">Are you an Artist?</p>
+<ion-radio  color="primary" slot="start" value="artist" ></ion-radio>
+</ion-col>
+    </ion-row>
+    <ion-row>
+      <p class="register-net">Register using social networks</p>
+    </ion-row>
+    <ion-row style="    margin-top: 11px;">
+      <ion-col style="    text-align: end;">
+       <img class="social-img" src="assets/welcome/facebook.png">
+      </ion-col>
+      <ion-col style="    text-align: center;">
+        <img  class="social-img" src="assets/welcome/twitter.png">
+      </ion-col>
+      <ion-col>
+        <img class="social-img" src="assets/welcome/google_plus.png">
+      </ion-col>
+    </ion-row>
+    <ion-row style="    margin-top: 25px;">
+      <p class="p-divider">OR</p>
+    </ion-row>
+    <ion-row style="justify-content:center">
+      <ion-item class="item-input">
+        <img  class="icon-img" style="height:15px"  src="assets/welcome/mail.png" item-left primary>
+        <ion-input type="text" placeholder="Enter Email"></ion-input>
+      
+    </ion-item>
+      <ion-item class="item-input">
+        <img class="icon-img" src="assets/welcome/password.png" item-left primary>
+        <ion-input placeholder="Enter Password"></ion-input>
+       </ion-item>
+       <ion-item class="item-input">
+        <img  class="icon-img" src="assets/welcome/password.png" item-left primary>
+        <ion-input placeholder="Confirm Password"></ion-input>
+       </ion-item>
+    </ion-row>
+    <ion-row style="margin-top: 45px;">
+      <ion-col class="col-style1">
+      <button  (click)="navigatetotab()"  style="    width: 83%;height: 40px;" ion-button full color="primary" round>SUBMIT</button> 
+      </ion-col>
+      <ion-col class="col-style2">
+        <button style="    width: 83%;height: 40px;" disabled ion-button full color="primary" round>CANCEL</button>
+      </ion-col>
+    </ion-row>
+    <ion-row style="height: 129px;" (click)="navigatebar(1)">
+      <p style="width: 100%;    text-align: CENTER;">Already have an account ?<span style="font-weight:bold"> Login Here</span></p>
+    </ion-row>
+    </div>
+    <div *ngIf="user==false">
+      <ion-row style="justify-content:center;    margin-top: 23px;">
+        <ion-item class="item-input">
+          <img style="height:15px" class="icon-img"  src="assets/welcome/mail.png" item-left primary>
+          <ion-input type="text" placeholder="Enter Email"></ion-input>
+        
+      </ion-item>
+        <ion-item class="item-input">
+          <img  class="icon-img" src="assets/welcome/password.png" item-left primary>
+          <ion-input placeholder="Enter Password"></ion-input>
+         </ion-item>
+         
+      </ion-row>
+      <ion-row>
+        <p  (click)=" checkalert()" class="forget-style">Forget Password?</p>
+      </ion-row>
+      <ion-row class="row-button">
+        <button (click)="navigatetotab()" style="width: 43%;height: 40px;" ion-button round color="primary" full>SUBMIT</button>
+      </ion-row>
+      <ion-row>
+          <ion-col col-5 class="check-style">
+          <!-- <ion-checkbox class="check" color="primary" checked="true"></ion-checkbox> -->
+          <img class="check-style1" src="assets/welcome/check.png">
+        </ion-col>
+        <ion-col col-7 style="    margin-left: -12px;">
+          <p>Remember Me</p>
+        </ion-col>
+      </ion-row>
+      <ion-row (click)="navigatebar(2)">
+ 
+    <p  style="width: 100%;    text-align: CENTER;">Don't have an account ?<span style="font-weight:bold"> Register Here</span></p>
+      </ion-row>
+      <ion-row class="row-bottom">
+      <div class="bottom-bar">
+      <ion-row>
+        <p class="register-net">Login using social networks</p>
+      </ion-row>
+      <ion-row style="    margin-top: 11px;">
+        <ion-col style="    text-align: end;">
+         <img class="social-img" src="assets/welcome/facebook.png">
+        </ion-col>
+        <ion-col style="    text-align: center;">
+          <img  class="social-img" src="assets/welcome/twitter.png">
+        </ion-col>
+        <ion-col>
+          <img class="social-img" src="assets/welcome/google_plus.png">
+        </ion-col>
+      </ion-row>
+      </div>
+      </ion-row>
+    </div>
+ 
+    
+</ion-content>

@@ -1,0 +1,52 @@
+<!--
+  Generated template for the InboxpagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title style="text-align:center;    margin-left: -19px;">Inbox</ion-title>
+    <ion-buttons right   >
+      <button ion-button (click)="tapshow()">
+        <ion-icon name="add"></ion-icon>
+   </button>
+   </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<ion-list style="    margin-top: 11px;">
+  <ion-row *ngFor="let value of fakedata">
+    <ion-col col-2>
+      <ion-avatar item-start>
+        <img class="img-design" src="assets/tabsicon/propic.jpg">
+      </ion-avatar> 
+    </ion-col>
+    <ion-col col-9 style="    margin-top: -9px;">
+     <div class="grid">
+    <div>
+      <p class="p-text">Pierece brown</p> 
+      <p class="p1-text">Subject goes here</p>
+    </div>
+    <div>
+      <p class="date-style">6 Dec 2018</p>
+    </div>
+     </div>
+     <ion-row class="msg-box">
+       <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+     </ion-row>
+    </ion-col>
+    <ion-col col-1>
+      <ion-icon  item-start style="    margin-top: 19px;">
+        <img class="icon-arrow" src="assets/inbox/arrow.png">
+      </ion-icon>
+    </ion-col>
+    <hr class="hr-style">
+  </ion-row>
+ 
+</ion-list>
+</ion-content>

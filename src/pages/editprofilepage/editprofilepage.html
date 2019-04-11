@@ -1,0 +1,116 @@
+<!--
+  Generated template for the EditprofilepagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title style="text-align:center;margin-left: 45px;">Edit Profile</ion-title>
+    
+    <ion-buttons right style="    width: 14px;margin-right: 28px;"  >
+      <button style="    width: 52px;" ion-button (click)="tapshow()">
+        <ion-icon style="font-size: 2.5rem;" name="close"></ion-icon>
+   </button>
+   </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-row class="row-style">
+  <ion-avatar>
+      <img class="img-pro" src="assets/tabsicon/propic.jpg">
+  </ion-avatar>
+
+
+</ion-row>
+
+<ion-row style="    margin-top: 8px;" class="but-style">
+  <button class="butt" ion-button color="primary">Update Image</button>
+</ion-row>
+<ion-label>Display Name</ion-label>
+<ion-item class="item-input">
+
+  <ion-input placeholder="James Macaw"></ion-input>
+ </ion-item>
+ <ion-label>User Message</ion-label>
+ <ion-item class="item-input">
+ 
+  <ion-input placeholder="Enter your message"></ion-input>
+ </ion-item>
+<ion-row>
+<ion-col>
+  <ion-label>First Name</ion-label>
+  <ion-item class="item-input">
+  
+   <ion-input placeholder="James"></ion-input>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-label>Last Name</ion-label>
+  <ion-item class="item-input">
+  
+   <ion-input placeholder="Macaw"></ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+<ion-row style="    margin-top: -11px;">
+<ion-col>
+  <ion-label>Country</ion-label>
+  <ion-item class="item-input">
+  
+   <ion-input placeholder="United State"></ion-input>
+   <ion-icon  name="arrow-dropdown" item-right></ion-icon>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-label>City</ion-label>
+  <ion-item class="item-input">
+  
+   <ion-input  placeholder="NYC"></ion-input>
+   <ion-icon  name="arrow-dropdown" item-right></ion-icon>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+<ion-label>Biography</ion-label>
+<ion-item class="item-input">
+
+  <ion-textarea placeholder="Tell the world about yourself.The shorter the better."></ion-textarea>
+ </ion-item>
+
+ <ion-row style="    margin-top: -11px;">
+  <ion-col>
+    <ion-label>Birth Date</ion-label>
+    <ion-item class="item-input">
+    
+     <ion-input placeholder="01/01/1998"></ion-input>
+    
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-label>Sex</ion-label>
+    <ion-item class="item-input">
+    
+     <ion-input placeholder="Male"></ion-input>
+     <ion-icon  name="arrow-dropdown" item-right></ion-icon>
+    </ion-item>
+  </ion-col>
+  </ion-row>
+  <ion-label>Phone</ion-label>
+  <ion-item class="item-input">
+  
+    <ion-input placeholder="999-999-999"></ion-input>
+   </ion-item>
+
+<div class="select-style">
+  <button style="width: 61%;    height: 40px;" ion-button round>SELECT CATEGORIES</button>
+</div>
+
+
+
+
+</ion-content>

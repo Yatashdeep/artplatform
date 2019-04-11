@@ -1,0 +1,364 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    
+   <ion-row no-padding>
+    <ion-col col-3 no-padding>
+        <ion-buttons right style="    width: 19px;">
+       
+            <ion-icon item-start>
+              <img class="navbar-icon" item-right src="assets/Menu/navbar.png">
+            </ion-icon>
+        
+        </ion-buttons>
+    </ion-col>
+    <ion-col style="text-align:center" col-9 no-padding>
+        <img  class="img-style"   item-centred src="assets/welcome/logoart.png">
+    </ion-col>
+   </ion-row>
+   <ion-row no-padding>
+      <div class="segment-class">
+          <ion-segment  [(ngModel)]="pet" (ionChange)=onSegmentChanged($event)>
+              <ion-segment-button  class="seg-tab" value="recentuploads" >
+          Recent Uploads
+              </ion-segment-button>
+              <hr class="divider-seg">
+              <ion-segment-button class="seg-tab" value="top_performers" >
+           Top Performers
+              </ion-segment-button>
+              <hr class="divider-seg">
+              <ion-segment-button class="seg-tab" value="puppie1" >
+                  Trending Items
+                      </ion-segment-button>
+            </ion-segment>
+          </div>
+   </ion-row>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <div *ngIf="catshow==true" id="categorylist" class="category-list" >
+        <ion-row style="    padding: 6px;">
+       <ion-col style="font-weight: 500;">Categories</ion-col>
+       <ion-col *ngIf="showcat==true" (click)="showcatevent(1)" class="prop-see" >See All</ion-col>
+       <ion-col *ngIf="showcat==false" (click)="showcatevent(2)" class="prop-see" >Close</ion-col>
+     </ion-row>
+     <ion-row *ngIf="showcat==true"  style="margin-top: -8px;">
+       <ion-col class="col-cat">
+         <img class="img-cat" src="assets/category/categories1.png">
+         <p class="cat-types">Music</p>
+     </ion-col>
+     <ion-col  class="col-cat">
+         <img class="img-cat" src="assets/category/categories2.png">
+   <p class="cat-types">Dance</p>
+       </ion-col>
+     <ion-col  class="col-cat">
+         <img class="img-cat" src="assets/category/categories3.png">
+    <p class="cat-types">Film</p>
+       </ion-col>
+     <ion-col  class="col-cat">
+         <img class="img-cat" src="assets/category/categories4.png">
+         <p class="cat-types">Photography</p>
+     </ion-col>
+     <ion-col  class="col-cat">
+         <img class="img-cat" src="assets/category/categories5.png">
+         <p class="cat-types">Litreature</p>
+     </ion-col>
+     </ion-row>
+    <div *ngIf="showcat==false" >
+      <ion-row>
+        <ion-col class="col-cat">
+            <img class="img-cat" src="assets/category/categories1.png">
+            <p class="cat-types">Music</p>
+        </ion-col>
+        <ion-col  class="col-cat">
+            <img class="img-cat" src="assets/category/categories2.png">
+      <p class="cat-types">Dance</p>
+          </ion-col>
+        <ion-col  class="col-cat">
+            <img class="img-cat" src="assets/category/categories3.png">
+       <p class="cat-types">Film</p>
+          </ion-col>
+        <ion-col  class="col-cat">
+            <img class="img-cat" src="assets/category/categories4.png">
+            <p class="cat-types">Photography</p>
+        </ion-col>
+       
+        </ion-row>
+        <ion-row>
+           
+            <ion-col  class="col-cat">
+                <img class="img-cat" src="assets/category/categories5.png">
+          <p class="cat-types">Litreature</p>
+              </ion-col>
+            <ion-col  class="col-cat">
+                <img class="img-cat" src="assets/category/categories6.png">
+           <p class="cat-types">Art</p>
+              </ion-col>
+            <ion-col  class="col-cat">
+                <img class="img-cat" src="assets/category/categories7.png">
+                <p class="cat-types">Freestyle</p>
+            </ion-col>
+            <ion-col  class="col-cat">
+                <img class="img-cat" src="assets/category/categories8.png">
+                <p class="cat-types">Personality</p>
+            </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col  class="col-cat">
+                    <img class="img-cat" src="assets/category/categories9.png">
+                    <p class="cat-types">Other</p>
+                </ion-col>
+            </ion-row>
+      </div>
+      </div>
+    
+    <div [ngSwitch]="pet">
+       
+      <div  *ngSwitchCase="'recentuploads'">
+        
+      <ion-list class="recent-upload"  >
+         
+   <ion-row padding>
+   <p class="head-p"><span class="span-head">Recent Uploads </span> in All categories</p>    
+  </ion-row>   
+ 
+ <ion-row *ngFor="let value of fakedata"  style="    margin-top: -10px;    margin-bottom: 26px;">
+    <div class="image-tag">
+       
+        <img style="    width: 89%;" src="assets/Dashboard/thumbnail.png">
+       
+      </div>
+      <div class="img-box" >
+      <div class="img-content">
+        <div class="cat-div"> 
+          <img class="cat-icon" src="assets/Dashboard/artist_profile1.png">
+        </div>
+       
+        <div class="detail-grid">
+          
+        <div class="detail-div">
+           <p style="font-weight: bold;" class="music-type">King Cay Music</p>
+           <p class="title-type">Music / Hip Hop/ Rap</p>
+           <div class="star-div"> <ionic3-star-rating 
+            activeIcon = "ios-star"
+            defaultIcon = "ios-star-outline"
+            activeColor = "rgb(228, 215, 38)" 
+            defaultColor = "#f4f4f4"
+            readonly="true"
+            [rating]="5">
+        </ionic3-star-rating></div>
+        </div>
+        
+        <div style="text-align:right; " class="detail-div">
+          <div class="author-box">
+          <p style="    height: 0px;font-weight: bold">King Cay</p>
+          <p>10 mins ago</p>
+          </div>
+        </div>
+        <div   class="detail-div userpic">
+          <img class="userimage" src="assets/tabsicon/propic.jpg">
+        </div>
+        </div>
+
+      </div>
+      </div>
+      <div class="post-img">
+   <div class="social-img">
+     
+     <div class="header1">
+        <img class="img-post" src="assets/Dashboard/share-gray.png">
+      </div>
+      <div class="header1">
+          <img class="img-post" src="assets/Dashboard/user.png">
+        </div>
+        <div class="header1">
+            <img class="img-post" src="assets/Dashboard/msg.png">
+          </div>
+          <div class="header1">
+              <img class="img-post" src="assets/Dashboard/error.png">
+            </div>
+
+      </div>
+    </div>
+    </ion-row>
+
+  </ion-list>
+    </div>
+      <ion-list *ngSwitchCase="'top_performers'">
+       <div class="cat-style">
+         <button class="category-style" ion-button fulll color="primary">FILTER BY CATEGORIES</button>
+       </div>
+       <ion-row style="    margin-top: -20px;" padding>
+          <p class="head-p"><span class="span-head">Top Performers </span> in All categories</p>    
+         </ion-row>  
+       <div>
+       <ion-row *ngFor="let value of fakedata;let i=index"  style="    margin-top: -10px;    margin-bottom: 26px;">
+          <div class="image-tag">
+             
+              <img style="    width: 89%;" src="assets/Dashboard/thumbnail.png">
+             
+            </div>
+            <div class="img-box" >
+            <div class="img-content">
+             
+               <ion-row>
+                 <ion-col class="cols-style">
+                  0{{i+1}}
+                 </ion-col>
+               <ion-col style="text-align:end">
+                  <img class="
+                cat-icon1" src="assets/Dashboard/artist_profile1.png">
+               </ion-col>
+                </ion-row>
+
+
+              <div class="detail-grid1">
+                
+              <div class="detail-div">
+                 <p style="font-weight: bold;" class="music-type">Dublin</p>
+                 <p class="title-type1">Photography/Architecture</p>
+                 <ion-row class="star-div"> 
+                 <ion-col  col-2>
+                  <img style="height:16px;    margin: 4px 1px 2px -3px;" src="assets/Dashboard/rating.png">
+                </ion-col>
+                <ion-col col-10>
+                 <p class="count-like">6037</p>
+                </ion-col>
+                </ion-row>
+              </div>
+              <div class="image-box">
+                <ion-row>
+                  <ion-col col-8 style="    text-align: end;">
+                    <p> dipu_m18</p></ion-col>
+                  <ion-col col-3>
+                      <img class="userimage1" src="assets/tabsicon/propic.jpg"> </ion-col>
+                </ion-row> 
+                <ion-row style="    margin-top: -32px;">
+                  <ion-col col-4>
+                        <p style="    margin-left: 23px;
+                        display: inline-block;">Vote</p>
+                  </ion-col>
+                  <ion-col col-8 style="padding: 9px;">
+                      <ionic3-star-rating 
+                      activeIcon = "ios-star"
+                      defaultIcon = "ios-star-outline"
+                      activeColor = "rgb(228, 215, 38)" 
+                      defaultColor = "rgb(228, 215, 38)"
+                      readonly="true"
+                      [rating]="0">
+                  </ionic3-star-rating>
+                    </ion-col>
+                  </ion-row>
+              </div>
+              
+              </div>
+      
+            </div>
+            </div>
+            <div class="post-img">
+         <div class="social-img">
+           
+           <div class="header1">
+              <img class="img-post" src="assets/Dashboard/share-gray.png">
+            </div>
+            <div class="header1">
+                <img class="img-post" src="assets/Dashboard/user.png">
+              </div>
+              <div class="header1">
+                  <img class="img-post" src="assets/Dashboard/msg.png">
+                </div>
+                <div class="header1">
+                    <img class="img-post" src="assets/Dashboard/error.png">
+                  </div>
+      
+            </div>
+          </div>
+          </ion-row>
+        </div>
+      </ion-list>
+      <ion-list *ngSwitchCase="'puppie1'">
+        
+        <div  *ngSwitchCase="'puppie1'">
+          
+        <ion-list class="recent-upload"  >
+           
+     <ion-row padding>
+     <p class="head-p"><span class="span-head">Trending Items </span> in All categories</p>    
+    </ion-row>   
+   
+   <ion-row *ngFor="let value of fakedata"  style="    margin-top: -10px;    margin-bottom: 26px;">
+      <div class="image-tag">
+         
+          <img style="    width: 89%;" src="assets/Dashboard/thumbnail.png">
+         
+        </div>
+        <div class="img-box" >
+        <div class="img-content">
+          <div class="cat-div"> 
+            <img class="
+            cat-icon" src="assets/Dashboard/artist_profile1.png">
+          </div>
+         
+          <div class="detail-grid">
+            
+          <div class="detail-div">
+             <p style="font-weight: bold;" class="music-type">King Cay Music</p>
+             <p class="title-type">Music / Hip Hop/ Rap</p>
+             <div class="star-div"> <ionic3-star-rating 
+              activeIcon = "ios-star"
+              defaultIcon = "ios-star-outline"
+              activeColor = "rgb(228, 215, 38)" 
+              defaultColor = "#f4f4f4"
+              readonly="true"
+              [rating]="5">
+          </ionic3-star-rating></div>
+          </div>
+          
+          <div style="text-align:right; " class="detail-div">
+            <div class="author-box">
+            <p style="    height: 0px;font-weight: bold">King Cay</p>
+            <p>10 mins ago</p>
+            </div>
+          </div>
+          <div   class="detail-div userpic">
+            <img class="userimage" src="assets/tabsicon/propic.jpg">
+          </div>
+          </div>
+  
+        </div>
+        </div>
+        <div class="post-img">
+     <div class="social-img">
+       
+       <div class="header1">
+          <img class="img-post" src="assets/Dashboard/share-gray.png">
+        </div>
+        <div class="header1">
+            <img class="img-post" src="assets/Dashboard/user.png">
+          </div>
+          <div class="header1">
+              <img class="img-post" src="assets/Dashboard/msg.png">
+            </div>
+            <div class="header1">
+                <img class="img-post" src="assets/Dashboard/error.png">
+              </div>
+  
+        </div>
+      </div>
+      </ion-row>
+  
+    </ion-list>
+      </div>
+        
+        </ion-list>
+      </div>
+</ion-content>

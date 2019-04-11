@@ -1,0 +1,42 @@
+page-inboxpage {
+    .img-design{
+        border-radius: 50%;
+        height: 59px;
+        margin-left: 8px;
+    }
+    .grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;  
+    }
+    .p-text{
+        font-size: 1.3rem;
+        width: 102%;
+        font-weight: 900;
+        margin-top: 5px;
+    }
+    .p1-text{
+        margin-top: -12px;
+        font-size: 1.2rem;
+    }
+    .date-style{
+        font-size: 1.2rem;
+        font-weight: 900;
+        text-align: right;
+        margin-top: 5px;
+    }
+    .icon-arrow{
+        height: 13px;
+      
+    }
+    .msg-box{
+        margin-top: -27px;
+        margin-left: 6px;
+        font-size: 1.2rem;
+        color: grey;
+        height: 18px;
+    }
+    .hr-style{
+        width: 100%;
+        height: 1px;
+    }
+}

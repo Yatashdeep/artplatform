@@ -1,0 +1,35 @@
+page-createconversationpage {
+    .item-input{
+  
+        background-color: #E9E9E9;
+        margin-bottom: 14px;
+    }.icon-img{
+        height: 20px;
+    
+    }
+    .text-input::-moz-placeholder {
+        color:#000 ;
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color:#000 ;
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        text-indent: 0;
+        color:#000;
+      }
+      .button-style{
+        position: absolute;
+     
+        width: 91%;
+        margin-top: -56px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .but-style{
+        height: 32px;
+        margin-right: 10px;
+      }
+
+}
